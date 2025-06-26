@@ -66,7 +66,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 37;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(534, 424);
+            this.dataGridView1.Size = new System.Drawing.Size(543, 424);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -113,7 +113,7 @@
             // 
             this.button2.Location = new System.Drawing.Point(586, 250);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(128, 43);
+            this.button2.Size = new System.Drawing.Size(137, 43);
             this.button2.TabIndex = 21;
             this.button2.Text = "还书";
             this.button2.UseVisualStyleBackColor = true;
@@ -176,7 +176,7 @@
             // 
             this.button1.Location = new System.Drawing.Point(586, 314);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 43);
+            this.button1.Size = new System.Drawing.Size(137, 43);
             this.button1.TabIndex = 21;
             this.button1.Text = "返回";
             this.button1.UseVisualStyleBackColor = true;
@@ -186,7 +186,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 424);
+            this.ClientSize = new System.Drawing.Size(791, 424);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);

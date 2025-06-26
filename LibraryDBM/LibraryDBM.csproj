@@ -58,6 +58,12 @@
     <Compile Include="admin2.Designer.cs">
       <DependentUpon>admin2.cs</DependentUpon>
     </Compile>
+    <Compile Include="admin2_1_check.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin2_1_check.Designer.cs">
+      <DependentUpon>admin2_1_check.cs</DependentUpon>
+    </Compile>
     <Compile Include="admin2_add.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,12 @@
     </Compile>
     <Compile Include="admin2_alter.Designer.cs">
       <DependentUpon>admin2_alter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin1_check.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin1_check.Designer.cs">
+      <DependentUpon>admin1_check.cs</DependentUpon>
     </Compile>
     <Compile Include="DBConnect.cs" />
     <Compile Include="Info.cs" />
@@ -119,8 +131,14 @@
     <EmbeddedResource Include="admin1.resx">
       <DependentUpon>admin1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="admin1_check.resx">
+      <DependentUpon>admin1_check.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="admin2.resx">
       <DependentUpon>admin2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin2_1_check.resx">
+      <DependentUpon>admin2_1_check.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="admin2_add.resx">
       <DependentUpon>admin2_add.cs</DependentUpon>

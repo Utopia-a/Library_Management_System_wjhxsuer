@@ -39,10 +39,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(341, 157);
+            this.label2.Font = new System.Drawing.Font("隶书", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(260, 110);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 12);
+            this.label2.Size = new System.Drawing.Size(239, 33);
             this.label2.TabIndex = 1;
             this.label2.Text = "欢迎管理员登录";
             // 
@@ -76,8 +77,9 @@
             // ToolStripMenuItem3
             // 
             this.ToolStripMenuItem3.Name = "ToolStripMenuItem3";
-            this.ToolStripMenuItem3.Size = new System.Drawing.Size(44, 22);
-            this.ToolStripMenuItem3.Text = "帮助";
+            this.ToolStripMenuItem3.Size = new System.Drawing.Size(116, 22);
+            this.ToolStripMenuItem3.Text = "查询读者借阅情况";
+            this.ToolStripMenuItem3.Click += new System.EventHandler(this.ToolStripMenuItem3_Click);
             // 
             // admin1
             // 

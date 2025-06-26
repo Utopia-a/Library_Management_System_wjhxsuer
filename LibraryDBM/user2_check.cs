@@ -25,7 +25,7 @@ namespace LibraryDBM
         {
             dataGridView1.Rows.Clear();
             DBConnect dBConnect = new DBConnect();
-            string sql = "select bid, name, author,press, rdate from t_book, t_borrow where t_borrow.bid = t_book.id";
+            string sql = $"SELECT bid, name, author, press, rdate from t_borrow,t_book where uid = '{Info.UID}' and (t_borrow.bid = t_book.id)";
             IDataReader dc = dBConnect.read(sql);
             string a0, a1, a2, a3, a4;
             while (dc.Read())
@@ -61,10 +61,17 @@ namespace LibraryDBM
             {
                 count = (int)dc[0];
             }
-            if(count != 0)//当借书表中没有记录时，要特殊处理
+
+            if (count != 0 && dataGridView1.SelectedRows.Count > 0)//当借书表中没有记录，特殊处理
             {
-                label7.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString() + dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+                dataGridView1.Rows[0].Selected = true; // 自动选中第一行
+                var row = dataGridView1.SelectedRows[0];
+                if (row.Cells.Count >= 2)
+                {
+                    label7.Text = row.Cells[0].Value.ToString() + row.Cells[1].Value.ToString();
+                }
             }
+
             dBConnect.DaoClose();
         }
 
@@ -78,13 +85,12 @@ namespace LibraryDBM
             string id = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
             string sql = $"delete from t_borrow where bid = '{id}' ";
             DBConnect dBConnect = new DBConnect();
-            int n = 0;
-            n += dBConnect.Execute(sql);
-            
-            string sql2 = $"update t_book set stock = stock + 1 where id = '{id}'";
-            n += dBConnect.Execute(sql2);
-        
-            if (n > 1)
+            int n = dBConnect.Execute(sql);
+
+            // string sql2 = $"update t_book set stock = stock + 1 where id = '{id}'";
+            //n += dBConnect.Execute(sql2);
+
+            if (n > 0)
             {
                 MessageBox.Show("还书成功");
             }

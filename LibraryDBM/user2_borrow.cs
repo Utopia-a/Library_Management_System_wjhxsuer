@@ -22,6 +22,7 @@ namespace LibraryDBM
 
         private void user2_borrow_Load(object sender, EventArgs e)
         {
+            dataGridView1.Rows[0].Selected = true; // 自动选中第一行
             label7.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString() + dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
         }
 
@@ -47,7 +48,7 @@ namespace LibraryDBM
         {
             dataGridView1.Rows.Clear();
             DBConnect dBConnect = new DBConnect();
-            string sql = "select * from t_book";
+            string sql = "select * from view_book";
             IDataReader dc = dBConnect.read(sql);
             string a0, a1, a2, a3, a4;
             while (dc.Read())
@@ -68,16 +69,14 @@ namespace LibraryDBM
 
         private void button1_Click(object sender, EventArgs e)//借书按钮
         {
-
-
-
             string id = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();//书本id
-
             
             string stockss = $"select stock from t_book where id = '{id}'";
+
             DBConnect dBConnect = new DBConnect();
             SqlDataReader dc = dBConnect.read(stockss);
-
+            
+            //库存
             int stock = 0;
             if (dc.Read())
             {
@@ -90,7 +89,7 @@ namespace LibraryDBM
 
             dc.Close();
 
-
+            //余额
             string moneyss = $"select money from t_user where id = '{Info.UID}'";
             dc = dBConnect.read(moneyss);
             int money = 0;
@@ -100,7 +99,7 @@ namespace LibraryDBM
                 dc.Close() ;
             }
 
-
+            //查看是否存在与借书表（避免重复借）
             string is_borrow = $"select count(*) from t_borrow where uid = '{Info.UID}' and bid = '{id}'";
             dc = dBConnect.read(is_borrow);
             int count = 0;
@@ -128,10 +127,12 @@ namespace LibraryDBM
             else
             {
                 // 都满足，执行借书
-                string sql_stock = $"update t_book set stock = stock - 1 where id = '{id}'";
+                //string sql_stock = $"update t_book set stock = stock - 1 where id = '{id}'";
+               
                 string sql_lend = $"insert into t_borrow(uid,bid,date,rdate) values('{Info.UID}', '{id}', getdate(), DATEADD(DAY, 30, GETDATE()));";
 
-                dBConnect.Execute(sql_stock);
+                //dBConnect.Execute(sql_stock);
+                
                 dBConnect.Execute(sql_lend);
                 MessageBox.Show("借书成功！");
                 Table();
@@ -141,11 +142,17 @@ namespace LibraryDBM
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)//每次选中书本显示
         {
+
             label7.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString() + dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
         }
         private void button2_Click(object sender, EventArgs e)//借书按钮
         {
             this.Close();
+        }
+
+        private void user2_borrow_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
