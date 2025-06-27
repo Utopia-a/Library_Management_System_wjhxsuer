@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -124,6 +125,15 @@ namespace LibraryDBM
                 this.Show();
 
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string str = @"Data Source=192.168.137.1;Initial Catalog=BookDB;User ID=remote_user;Password=123";
+            SqlConnection sqlConnection = new SqlConnection(str);
+            sqlConnection.Open();
+            MessageBox.Show("连接成功");
+            sqlConnection.Close();
         }
     }
 }
