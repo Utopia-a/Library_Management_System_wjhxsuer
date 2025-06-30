@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,6 +21,8 @@ namespace LibraryDBM
         private void admin2_Load(object sender, EventArgs e)
         {
             Table();
+            dataGridView1.Rows[0].Selected = true; // 自动选中第一行
+         
             label2.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString() + dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
         }
         public void Table()//显示表格
@@ -174,6 +177,11 @@ namespace LibraryDBM
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void uiDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

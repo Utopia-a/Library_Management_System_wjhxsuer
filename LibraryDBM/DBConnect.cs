@@ -9,10 +9,10 @@ namespace LibraryDBM
         // 1. 连接数据库的方法
         public SqlConnection connect()
         {
-            string str = @"Data Source=192.168.137.1;Initial Catalog=BookDB;User ID=remote_user;Password=123";
-            sc = new SqlConnection(str);
-            sc.Open();
-            return sc;
+                string str = @"Data Source=UTAPIA; Initial Catalog=BookDB; Integrated Security=True";
+                sc = new SqlConnection(str); // 创建连接对象
+                sc.Open(); // 打开数据库连接
+                return sc; // 返回连接对象
         }
 
 

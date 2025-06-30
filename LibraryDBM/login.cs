@@ -127,13 +127,14 @@ namespace LibraryDBM
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void skinButton1_Click(object sender, EventArgs e)
         {
-            string str = @"Data Source=192.168.137.1;Initial Catalog=BookDB;User ID=remote_user;Password=123";
-            SqlConnection sqlConnection = new SqlConnection(str);
-            sqlConnection.Open();
-            MessageBox.Show("连接成功");
-            sqlConnection.Close();
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -14,7 +14,7 @@ namespace LibraryDBM
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new login());
-            // Application.Run(new admin2());
+           // Application.Run(new test2());
         }
     }
 }

@@ -38,7 +38,7 @@ namespace LibraryDBM
 
         private void button1_Click(object sender, System.EventArgs e)
         {
-            user2_borrow user = new user2_borrow();
+            test_front user  = new test_front();
             this.Hide();
             user.ShowDialog();
             this.Show();
@@ -46,10 +46,7 @@ namespace LibraryDBM
 
         private void button3_Click(object sender, System.EventArgs e)
         {
-            user2_check user = new user2_check();
-            this.Hide();
-            user.ShowDialog();
-            this.Show();
+      
         }
 
         private void button2_Click(object sender, System.EventArgs e)
