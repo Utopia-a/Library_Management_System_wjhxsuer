@@ -93,10 +93,10 @@ namespace LibraryDBM
             //余额
             string moneyss = $"select money from t_user where id = '{Info.UID}'";
             dc = dBConnect.read(moneyss);
-            int money = 0;
+            decimal money = 0;
             if (dc.Read())
             {
-                money = (int)dc["money"];
+                money = (decimal)dc["money"];
                 dc.Close();
             }
 
@@ -125,7 +125,7 @@ namespace LibraryDBM
             {
                 MessageBox.Show("这本书已经借过了");
             }
-            else if(Info.bookNum > 5)
+            else if(Info.bookNum >= 5)
             {
                 MessageBox.Show("已达到借书上限");
             }
@@ -140,6 +140,7 @@ namespace LibraryDBM
 
                 dBConnect.Execute(sql_lend);
                 MessageBox.Show("借书成功！");
+                Info.bookNum++;
                 Table();
             }
         }

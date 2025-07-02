@@ -49,7 +49,11 @@ namespace LibraryDBM
                 {
                     MessageBox.Show("旧密码错误，请检查后重试");
                 }
-                else
+                else if(uiTextBox1.Text == uiTextBox2.Text)
+                {
+
+                }
+                else 
                 {
                     string sql = $"UPDATE t_user SET password = '{uiTextBox2.Text}' WHERE id = '{Info.UID}'; ";
                     DBConnect dBConnect = new DBConnect();

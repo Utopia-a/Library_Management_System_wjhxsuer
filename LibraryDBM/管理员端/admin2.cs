@@ -150,7 +150,7 @@ namespace LibraryDBM
         //书名查询
         private void button6_Click(object sender, EventArgs e)
         {
-            string sql = $"select * from t_book where name = '%{textBox2.Text}%'";
+            string sql = $"SELECT * FROM t_book WHERE name LIKE '%{textBox2.Text}%'";
             dataGridView1.Rows.Clear();
             DBConnect dBConnect = new DBConnect();
             IDataReader dc = dBConnect.read(sql);

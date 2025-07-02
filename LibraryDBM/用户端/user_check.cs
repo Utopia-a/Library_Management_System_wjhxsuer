@@ -74,7 +74,6 @@ namespace LibraryDBM
 
         private void uiPanel1_Click(object sender, EventArgs e)
         {
-
         }
 
         //还书逻辑，还书前判断是否产生了罚款，若是余额小于罚款，还书失败，否则还书成功
@@ -129,8 +128,8 @@ namespace LibraryDBM
             string sql_1 = $"update t_user set money = money - {fine} where id = '{Info.UID}';";
             dBConnect.Execute(sql_1);
             
-            Info.money = money - fine;
-
+            Info.money = Info.money - fine;
+            Info.bookNum--;
             Table();
             dBConnect.DaoClose();
         }

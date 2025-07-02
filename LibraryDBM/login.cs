@@ -21,7 +21,8 @@ namespace LibraryDBM
            
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+     
+        private void uiButton1_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "" && textBox2.Text != "")
             {
@@ -31,6 +32,30 @@ namespace LibraryDBM
             {
                 MessageBox.Show("用户名或者密码不能为空");
             }
+        }
+
+        private void uiButton2_Click(object sender, EventArgs e)
+        {
+            if (radioButtonAdmin.Checked == true)
+            {
+                register2 register21 = new register2();
+                this.Hide();
+                register21.ShowDialog();
+                register21.Close();
+                this.Show();
+            }
+            else
+            {
+                register register12 = new register();
+                this.Hide();
+                register12.ShowDialog();
+                this.Show();
+
+            }
+        }
+        private void uiButton3_Click(object sender, EventArgs e)
+        {
+           this.Close();
         }
 
         public void Login()
@@ -85,53 +110,18 @@ namespace LibraryDBM
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)//注册
-        {
-            if (radioButtonAdmin.Checked == true) 
-            { 
-                register2 register21 = new register2();
-                this.Hide();
-                register21.ShowDialog();
-                register21.Close();
-                this.Show();
-            }
-            else
-            {
-                register register12 = new register();
-                this.Hide();
-                register12.ShowDialog();
-                this.Show();
-
-            }
-        }
+   
         private void login_Load(object sender, EventArgs e)
         {
             this.pictureBox1.Image = Properties.Resources.西安石油大学logo;
         }
 
-        private void label1_Click(object sender, EventArgs e)
+
+
+
+        private void button3_Click_1(object sender, EventArgs e)//注册
         {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
+           
         }
     }
 }
