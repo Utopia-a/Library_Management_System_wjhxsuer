@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace LibraryDBM
 {
-    public partial class admin2_1_check : Form
+    public partial class user_touch : UserControl
     {
-        public admin2_1_check()
+        public user_touch()
         {
             InitializeComponent();
+            pictureBox1.Image = Properties.Resources.微信名片;
+            pictureBox2.Image = Properties.Resources.收款码;
+        }
+
+        private void uiPanel1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

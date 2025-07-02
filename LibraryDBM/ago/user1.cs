@@ -38,7 +38,7 @@ namespace LibraryDBM
 
         private void button1_Click(object sender, System.EventArgs e)
         {
-            test_front user  = new test_front();
+            user_front user  = new user_front();
             this.Hide();
             user.ShowDialog();
             this.Show();

@@ -19,7 +19,6 @@ namespace LibraryDBM
         // 2. 创建 SQL 命令对象的方法
         public SqlCommand command(string sql)
         {
-            // 创建 SQL 命令对象，并与数据库连接绑定
             SqlCommand cmd = new SqlCommand(sql, connect());
             return cmd;
         }
@@ -30,7 +29,7 @@ namespace LibraryDBM
             return command(sql).ExecuteNonQuery();
         }
 
-        // 4. 执行查询操作的方法
+        // 4. 执行读取操作的方法
         public SqlDataReader read(string sql)
         {
             return command(sql).ExecuteReader();

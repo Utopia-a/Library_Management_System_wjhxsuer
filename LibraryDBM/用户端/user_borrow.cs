@@ -19,8 +19,7 @@ namespace LibraryDBM
             InitializeComponent();
             Table();
             showinfo();
-            dataGridView1.Rows[0].Selected = true; // 自动选中第一行
-            label7.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+           
         }
         public void showinfo()//显示信息
         {
@@ -45,8 +44,9 @@ namespace LibraryDBM
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            label7.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
         }
+
         public void Table()//显示表格
         {
             dataGridView1.Rows.Clear();
@@ -125,6 +125,10 @@ namespace LibraryDBM
             {
                 MessageBox.Show("这本书已经借过了");
             }
+            else if(Info.bookNum > 5)
+            {
+                MessageBox.Show("已达到借书上限");
+            }
             else
             {
                 // 都满足，执行借书
@@ -138,6 +142,11 @@ namespace LibraryDBM
                 MessageBox.Show("借书成功！");
                 Table();
             }
+        }
+
+        private void uiPanel1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

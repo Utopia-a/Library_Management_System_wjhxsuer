@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CCWin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +14,11 @@ namespace LibraryDBM
 {
     public partial class login : Form
     {
+       
         public login()
         {
             InitializeComponent();
+           
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -46,7 +49,7 @@ namespace LibraryDBM
 
                     MessageBox.Show("登录成功");
                    
-                    user1 user = new user1();
+                    user_front user = new user_front();
                     this.Hide();
                     user.ShowDialog();
                     this.Show();
@@ -60,7 +63,7 @@ namespace LibraryDBM
                 dBConnect.DaoClose();
             }
 
-            //管理员
+            //管理员端口的进入
             if (radioButtonAdmin.Checked == true)
             {
                 DBConnect dBConnect = new DBConnect();
@@ -82,31 +85,6 @@ namespace LibraryDBM
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void login_Load(object sender, EventArgs e)
-        {
-            this.pictureBox1.Image = Properties.Resources.西安石油大学logo;
-        }
-
         private void button3_Click(object sender, EventArgs e)//注册
         {
             if (radioButtonAdmin.Checked == true) 
@@ -126,10 +104,29 @@ namespace LibraryDBM
 
             }
         }
+        private void login_Load(object sender, EventArgs e)
+        {
+            this.pictureBox1.Image = Properties.Resources.西安石油大学logo;
+        }
 
-        private void skinButton1_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
