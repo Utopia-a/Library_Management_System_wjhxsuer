@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.uiPanel1 = new Sunny.UI.UIPanel();
+            this.uiButton3 = new Sunny.UI.UIButton();
+            this.uiButton2 = new Sunny.UI.UIButton();
+            this.uiButton1 = new Sunny.UI.UIButton();
             this.textBox2 = new Sunny.UI.UITextBox();
             this.textBox1 = new Sunny.UI.UITextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -37,9 +40,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.uiButton1 = new Sunny.UI.UIButton();
-            this.uiButton2 = new Sunny.UI.UIButton();
-            this.uiButton3 = new Sunny.UI.UIButton();
             this.uiPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -70,6 +70,69 @@
             this.uiPanel1.TabIndex = 13;
             this.uiPanel1.Text = null;
             this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // uiButton3
+            // 
+            this.uiButton3.BackColor = System.Drawing.Color.White;
+            this.uiButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiButton3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
+            this.uiButton3.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(102)))));
+            this.uiButton3.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(138)))), ((int)(((byte)(64)))));
+            this.uiButton3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton3.ForeColor = System.Drawing.Color.Black;
+            this.uiButton3.Location = new System.Drawing.Point(444, 298);
+            this.uiButton3.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiButton3.Name = "uiButton3";
+            this.uiButton3.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(102)))));
+            this.uiButton3.Size = new System.Drawing.Size(119, 43);
+            this.uiButton3.TabIndex = 24;
+            this.uiButton3.Text = "取消";
+            this.uiButton3.TipsColor = System.Drawing.Color.Black;
+            this.uiButton3.TipsFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton3.TipsForeColor = System.Drawing.Color.Black;
+            this.uiButton3.Click += new System.EventHandler(this.uiButton3_Click);
+            // 
+            // uiButton2
+            // 
+            this.uiButton2.BackColor = System.Drawing.Color.White;
+            this.uiButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiButton2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
+            this.uiButton2.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(102)))));
+            this.uiButton2.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(138)))), ((int)(((byte)(64)))));
+            this.uiButton2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton2.ForeColor = System.Drawing.Color.Black;
+            this.uiButton2.Location = new System.Drawing.Point(289, 298);
+            this.uiButton2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiButton2.Name = "uiButton2";
+            this.uiButton2.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(102)))));
+            this.uiButton2.Size = new System.Drawing.Size(119, 43);
+            this.uiButton2.TabIndex = 24;
+            this.uiButton2.Text = "注册";
+            this.uiButton2.TipsColor = System.Drawing.Color.Black;
+            this.uiButton2.TipsFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton2.TipsForeColor = System.Drawing.Color.Black;
+            this.uiButton2.Click += new System.EventHandler(this.uiButton2_Click);
+            // 
+            // uiButton1
+            // 
+            this.uiButton1.BackColor = System.Drawing.Color.White;
+            this.uiButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
+            this.uiButton1.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(102)))));
+            this.uiButton1.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(138)))), ((int)(((byte)(64)))));
+            this.uiButton1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton1.ForeColor = System.Drawing.Color.Black;
+            this.uiButton1.Location = new System.Drawing.Point(131, 298);
+            this.uiButton1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiButton1.Name = "uiButton1";
+            this.uiButton1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(102)))));
+            this.uiButton1.Size = new System.Drawing.Size(119, 43);
+            this.uiButton1.TabIndex = 24;
+            this.uiButton1.Text = "登录";
+            this.uiButton1.TipsColor = System.Drawing.Color.Black;
+            this.uiButton1.TipsFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton1.TipsForeColor = System.Drawing.Color.Black;
+            this.uiButton1.Click += new System.EventHandler(this.uiButton1_Click);
             // 
             // textBox2
             // 
@@ -179,69 +242,6 @@
             this.label1.Size = new System.Drawing.Size(314, 48);
             this.label1.TabIndex = 16;
             this.label1.Text = "图书管理系统";
-            // 
-            // uiButton1
-            // 
-            this.uiButton1.BackColor = System.Drawing.Color.White;
-            this.uiButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
-            this.uiButton1.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(102)))));
-            this.uiButton1.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(138)))), ((int)(((byte)(64)))));
-            this.uiButton1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton1.ForeColor = System.Drawing.Color.Black;
-            this.uiButton1.Location = new System.Drawing.Point(131, 298);
-            this.uiButton1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiButton1.Name = "uiButton1";
-            this.uiButton1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(102)))));
-            this.uiButton1.Size = new System.Drawing.Size(119, 43);
-            this.uiButton1.TabIndex = 24;
-            this.uiButton1.Text = "登录";
-            this.uiButton1.TipsColor = System.Drawing.Color.Black;
-            this.uiButton1.TipsFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton1.TipsForeColor = System.Drawing.Color.Black;
-            this.uiButton1.Click += new System.EventHandler(this.uiButton1_Click);
-            // 
-            // uiButton2
-            // 
-            this.uiButton2.BackColor = System.Drawing.Color.White;
-            this.uiButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
-            this.uiButton2.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(102)))));
-            this.uiButton2.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(138)))), ((int)(((byte)(64)))));
-            this.uiButton2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton2.ForeColor = System.Drawing.Color.Black;
-            this.uiButton2.Location = new System.Drawing.Point(289, 298);
-            this.uiButton2.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiButton2.Name = "uiButton2";
-            this.uiButton2.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(102)))));
-            this.uiButton2.Size = new System.Drawing.Size(119, 43);
-            this.uiButton2.TabIndex = 24;
-            this.uiButton2.Text = "注册";
-            this.uiButton2.TipsColor = System.Drawing.Color.Black;
-            this.uiButton2.TipsFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton2.TipsForeColor = System.Drawing.Color.Black;
-            this.uiButton2.Click += new System.EventHandler(this.uiButton2_Click);
-            // 
-            // uiButton3
-            // 
-            this.uiButton3.BackColor = System.Drawing.Color.White;
-            this.uiButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(228)))));
-            this.uiButton3.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(102)))));
-            this.uiButton3.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(138)))), ((int)(((byte)(64)))));
-            this.uiButton3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton3.ForeColor = System.Drawing.Color.Black;
-            this.uiButton3.Location = new System.Drawing.Point(444, 298);
-            this.uiButton3.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiButton3.Name = "uiButton3";
-            this.uiButton3.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(102)))));
-            this.uiButton3.Size = new System.Drawing.Size(119, 43);
-            this.uiButton3.TabIndex = 24;
-            this.uiButton3.Text = "取消";
-            this.uiButton3.TipsColor = System.Drawing.Color.Black;
-            this.uiButton3.TipsFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton3.TipsForeColor = System.Drawing.Color.Black;
-            this.uiButton3.Click += new System.EventHandler(this.uiButton3_Click);
             // 
             // login
             // 

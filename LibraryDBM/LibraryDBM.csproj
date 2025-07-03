@@ -62,7 +62,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CSkin">
-      <HintPath>..\..\..\..\AAA\CSkin 4.0\CSkin.dll</HintPath>
+      <HintPath>C:\Users\Utopia\AppData\Local\Temp\BNZ.6865239b2bcf55\CSkin.dll</HintPath>
     </Reference>
     <Reference Include="SunnyUI, Version=3.8.5.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb, processorArchitecture=MSIL">
       <HintPath>..\packages\SunnyUI.3.8.5\lib\net472\SunnyUI.dll</HintPath>
@@ -86,6 +86,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="just_test.cs" />
     <Compile Include="管理员端\admin1.cs">
       <SubType>Form</SubType>
     </Compile>
