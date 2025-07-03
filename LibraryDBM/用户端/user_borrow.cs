@@ -51,7 +51,7 @@ namespace LibraryDBM
         {
             dataGridView1.Rows.Clear();
             DBConnect dBConnect = new DBConnect();
-            string sql = "select * from view_book";
+            string sql = "select * from vw_book_info";
             IDataReader dc = dBConnect.read(sql);
             string a0, a1, a2, a3, a4;
             while (dc.Read())
@@ -131,7 +131,7 @@ namespace LibraryDBM
             }
             else
             {
-                // 都满足，执行借书
+                // 都满足，执行借书,触发器
                 //string sql_stock = $"update t_book set stock = stock - 1 where id = '{id}'";
 
                 string sql_lend = $"insert into t_borrow(uid,bid,date,rdate) values('{Info.UID}', '{id}', getdate(), DATEADD(DAY, 30, GETDATE()));";
