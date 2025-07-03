@@ -42,5 +42,20 @@ namespace LibraryDBM
             admin1_.ShowDialog();
             this.Show();
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_BackColorChanged(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }
