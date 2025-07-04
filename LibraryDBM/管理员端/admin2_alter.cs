@@ -21,11 +21,11 @@ namespace LibraryDBM
         {
             InitializeComponent();
         
-            label6.Text = id;
-            label7.Text = name;
-            label8.Text = author;
-            label9.Text = press;
-            label10.Text = stock;
+            label6.Text = id.Trim();
+            label7.Text = name.Trim();
+            label8.Text = author.Trim();
+            label9.Text = press.Trim();
+            label10.Text = stock.Trim();
         }
 
 

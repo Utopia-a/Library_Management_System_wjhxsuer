@@ -33,7 +33,6 @@ namespace LibraryDBM
                 password = dc["password"].ToString().Trim();
             }
 
-            MessageBox.Show(password);
 
             if (uiTextBox1.Text == "" || uiTextBox2.Text == "" || uiTextBox3.Text == "")
             {

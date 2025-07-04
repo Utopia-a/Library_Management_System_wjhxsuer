@@ -76,7 +76,7 @@ namespace LibraryDBM
             dc.Close();
 
 
-            string sql3 = $"EXEC dbo.sp_GetBorrowInfoByUserId @UserId = '{id}';";
+            string sql3 = $"EXEC GetUserBorrowInfo @UserId = '{id}';";
             dc = dc = dBConnect.read(sql3);
             string a0, a1, a2, a3, a4;
             while (dc.Read())

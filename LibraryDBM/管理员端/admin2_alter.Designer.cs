@@ -108,7 +108,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Bisque;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(148)))), ((int)(((byte)(110)))));
             this.label6.Font = new System.Drawing.Font("隶书", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label6.Location = new System.Drawing.Point(190, 196);
             this.label6.Name = "label6";
@@ -119,9 +119,9 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Bisque;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(148)))), ((int)(((byte)(110)))));
             this.label7.Font = new System.Drawing.Font("隶书", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.Location = new System.Drawing.Point(312, 196);
+            this.label7.Location = new System.Drawing.Point(288, 196);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 19);
             this.label7.TabIndex = 0;
@@ -130,7 +130,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Bisque;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(148)))), ((int)(((byte)(110)))));
             this.label8.Font = new System.Drawing.Font("隶书", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label8.Location = new System.Drawing.Point(425, 196);
             this.label8.Name = "label8";
@@ -141,7 +141,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Bisque;
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(148)))), ((int)(((byte)(110)))));
             this.label9.Font = new System.Drawing.Font("隶书", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label9.Location = new System.Drawing.Point(537, 196);
             this.label9.Name = "label9";
@@ -152,7 +152,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Bisque;
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(148)))), ((int)(((byte)(110)))));
             this.label10.Font = new System.Drawing.Font("隶书", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label10.Location = new System.Drawing.Point(667, 196);
             this.label10.Name = "label10";
@@ -254,7 +254,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Bisque;
             this.button1.Font = new System.Drawing.Font("隶书", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(272, 329);
+            this.button1.Location = new System.Drawing.Point(292, 340);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(156, 33);
             this.button1.TabIndex = 3;
@@ -267,7 +267,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::LibraryDBM.Properties.Resources.图书5;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(749, 440);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.textBox5);
