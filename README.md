@@ -2,8 +2,7 @@
 
 ---
 
-这是一个用C#语言，基于Winform控件的一个可视化界面管理系统
-
+这是一个用C#语言，基于Winform控件的图书管理系统
 
 
 目前实现的功能阐述：
@@ -51,5 +50,7 @@ t_borrow
 注册信息
 ```
 
-
+若是有需要学习的朋友，请务必在克隆项目到本地的基础上，安装SunnyUI 和 CSkin两个控件，安装地址如下：
+https://gitee.com/yhuse/SunnyUI（sunnyUI）
+http://www.cskin.net/（CSkin）
 
