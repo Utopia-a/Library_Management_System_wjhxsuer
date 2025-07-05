@@ -51,6 +51,7 @@ t_borrow
 ```
 
 若是有需要学习的朋友，请务必在克隆项目到本地的基础上，安装SunnyUI 和 CSkin两个控件，安装地址如下：
-https://gitee.com/yhuse/SunnyUI（sunnyUI）
+https://gitee.com/yhuse/SunnyUI（sunnyUI）  
+
 http://www.cskin.net/（CSkin）
 
