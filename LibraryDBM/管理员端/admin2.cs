@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
@@ -21,8 +22,7 @@ namespace LibraryDBM
         private void admin2_Load(object sender, EventArgs e)
         {
             Table();
-            dataGridView1.Rows[0].Selected = true; // 自动选中第一行
-         
+            dataGridView1.Rows[0].Selected = true;
             label2.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString() + dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
         }
         public void Table()//显示表格
@@ -66,19 +66,38 @@ namespace LibraryDBM
         }
 
         //删除
-
-        private void dataGridView1_Click(object sender, EventArgs e)
-        {
-            label2.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString() + dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("请先选中要删除的书本", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
                 string id = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
                 label2.Text = id + dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
                 DialogResult dr = MessageBox.Show("确认要删除吗", "提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+                string sql1 = $"select count (*) from t_borrow where bid = '{id}'";
+                DBConnect dBConnect1 = new DBConnect();
+                SqlDataReader dc = dBConnect1.read(sql1);
+
+                int borrowCount = 0;
+                if (dc.Read())
+                {
+                    borrowCount = dc.GetInt32(0);
+                }
+                dc.Close();
+                dBConnect1.DaoClose();
+
+                if (borrowCount > 0)
+                {
+                    MessageBox.Show("该书正在被借阅，不能删除", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 if (dr == DialogResult.OK)
                 {
                     string sql = $"delete from t_book where id = '{id}'";
@@ -88,18 +107,18 @@ namespace LibraryDBM
                         MessageBox.Show("删除成功");
                         Table();
                     }
-                    else 
+                    else
                     {
                         MessageBox.Show("删除失败" + sql);
 
                     }
                     dBConnect.DaoClose();
                 }
-                
+
             }
-            catch 
-            { 
-                MessageBox.Show("请先选中要删除的书本","提示",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            catch (Exception ex)
+            {
+                MessageBox.Show($"操作异常: {ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -183,7 +202,7 @@ namespace LibraryDBM
 
         private void uiDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            label2.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString() + dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
         }
     }
 }

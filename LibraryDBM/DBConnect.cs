@@ -9,8 +9,8 @@ namespace LibraryDBM
         // 1. 连接数据库的方法
         public SqlConnection connect()
         {
-            //string str = @"Data Source=UTAPIA; Initial Catalog=BookDB; Integrated Security=True";
-            string str = @"Data Source= 10.129.87.20,1433; Initial Catalog=BookDB; User Id=sa; Password=2004113921mpx ; Encrypt=True; TrustServerCertificate=True;";
+            string str = @"Data Source=UTAPIA; Initial Catalog=BookDB; Integrated Security=True";
+            //string str = @"Data Source= 10.129.87.20,1433; Initial Catalog=BookDB; User Id=sa; Password=2004113921mpx ; Encrypt=True; TrustServerCertificate=True;";
             
             sc = new SqlConnection(str); // 创建连接对象
                 sc.Open(); // 打开数据库连接
